@@ -33,7 +33,9 @@
 
     ;; From http://stackoverflow.com/a/13509208/874671
    ((memq system-type '(windows-nt ms-dos cygwin))
-    (list "cmd.exe" "/C" "start" "cmd.exe"))
+    ;(list "cmd.exe" "/C" "start" "cmd.exe")
+    (list "cmder.exe" "/start" dir)
+    )
 
    ;; Probably X11!
    (t '("x-terminal-emulator"))))
